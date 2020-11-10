@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const app = express()
 const multer = require("multer")
@@ -61,4 +62,6 @@ app.get('/things', function(req, res){
    res.send('Things');
 });
 
-app.listen(3000)
+app.listen(process.env.PORT||3000,()=>{
+    console.log("Server Running ")
+})
