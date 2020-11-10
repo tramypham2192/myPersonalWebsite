@@ -61,7 +61,7 @@ app.use('/things', function(req, res, next){
 app.get('/things', function(req, res){
    res.send('Things');
 });
-
+console.log(process.env.PORT ||3000);
 app.listen(process.env.PORT||3000,()=>{
     console.log("Server Running ")
 })
